@@ -1,0 +1,22 @@
+GET _cat/health
+
+PUT my_first_index/_doc/1
+{
+    "username":"Harrison",
+    "comment":"I like search!"
+}
+
+POST my_first_index/_doc
+{
+    "username":"Maria",
+    "comment":"I like search!"
+}
+
+GET my_first_index/_doc/1
+
+GET my_first_index/_search
+{
+    "query": {
+        "match_all":{}
+    }
+}
